@@ -1,0 +1,13 @@
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    
+}
+.divimage{
+    height: fit-content;
+}
+.specific{
+    height: 100px;
+    background-color: red;
+}

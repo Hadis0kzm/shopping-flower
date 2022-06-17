@@ -1,0 +1,209 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    background-color: transparent;
+    z-index: 3;   
+}
+
+.logo{    
+    text-align: right;
+}
+
+.input{
+    background: transparent;   
+    border: none;
+    border-bottom:3px solid black ;
+    text-align: right;
+    cursor: pointer;      
+}
+.input:focus{
+    outline: none;
+}
+.searchicon{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+.cart{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.left{
+    width: 100px;
+    height: 70px;
+    margin:  30px 0 0px 0;
+    position: relative;
+    cursor:pointer;
+}
+.menu{
+    display:block;
+    background-color: black;}
+    
+/*فک کنم باید با سس کار کنم*/
+/* .left:hover{
+    .menu:nth-child(1) {
+   
+    transform: scaleX(0.5);
+    
+}}
+ */
+
+
+
+
+/*small devic*/
+@media(min-width:320px){
+    .container{
+        padding: 0 4px;
+        height: 45px;
+    }
+    .logo{
+        width: 30px;
+        position: relative;
+      
+    }/*میخام فقط ایکون جستجو باشه وقتی روش کلیک کرد اینپوت نمایش بده */
+    .input{
+       font-size: 0.7rem;
+       width: 70px;
+       position: relative;
+       bottom: 40px;
+       
+    }
+    .searchicon{
+        width: 17px;
+        position: relative;
+        bottom: 8px;
+        right: 15px;
+    }
+    .cart{
+        right: 9px;
+        width: 17px;
+        margin-bottom: 10px;
+        position: relative;
+        bottom: 21px;
+    }
+    .menu{
+        position: relative;
+        bottom: 18px;
+        left: 9px;
+        border-radius:80px;
+        width: 17px;
+        height: 1.6px;
+        margin: 5px 0;
+    }
+}
+/*tablets*/
+@media(min-width:768px){
+    .container{
+        padding: 0 15px;
+        height: 60px;
+    }
+    .logo{
+        width: 36px;
+        position: relative;
+        margin-left: 60px;
+        top: 3px;
+    }
+    .searchcontainer{
+        margin-right: 5px;
+        position: relative;
+        right: 10px;
+    }
+    .input{
+        width: 120px;
+        position: relative;
+        bottom: 30px;
+        margin-right: 4px;
+        
+    }
+    .searchicon{
+        position: relative;
+        bottom: 1px;
+        right: 5px;
+    }
+    .cart{
+        position: relative;
+        bottom: 15px;
+    }
+    .menu{
+        position: relative;
+        border-radius:20px;
+        width: 18px;
+        height: 1.5px;
+        margin: 5px 0;
+       
+    }
+    .left{
+        top: 5.5px;
+    }
+}
+/*large device(desktop)*/
+@media(min-width:992px){
+    .container{
+        padding: 0 25px;
+        height: 103px;
+    }
+    .logo{
+        width: 63px;
+        position: relative;
+        left: 80px;
+    }
+    .input{
+        width: 190px;
+        position: relative;
+        bottom: 5px;
+        font-size: 1.4rem; 
+    }
+    .searchicon{
+        width: 35px;
+        position: relative;
+        top: 19px;
+    }
+    .cart{
+        width: 35px;
+        position: relative;
+        top:15px;
+    }
+    .searchcontainer{
+        margin-right: 20px;
+    }
+    .menu{
+        
+        border-radius:10px;
+        width: 31px;
+        height: 3px;
+        margin: 10px 0;
+    }
+    .left{
+        top: 15px;
+    }
+}
+/*xlargedevice (large desktop)(mysys)*/
+@media(min-width:1200px){
+    .container{
+        padding: 0 40px;
+        height: 105px;
+    }
+    .logo{
+        width: 70px;
+        position: relative;
+        margin-right: -10px;
+    }
+    .input{
+        width: 250px;
+    }
+    .left{
+        width: 70px;
+    }
+    .menu{
+        display:block;
+        background-color: black;
+        border-radius:10px;
+        width: 30px;
+        height: 3px;
+        margin: 10px 0;
+    }
+
+    
+}

@@ -1,0 +1,20 @@
+.MainContainer{
+    background-color:  var(--keremKam) ;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    
+}
+.MainContainer div{
+    background-color: yellowgreen;
+}
+
+image{
+    width: 550px;
+    height: 450px;
+}
+specific{
+    height: 85px;
+}
