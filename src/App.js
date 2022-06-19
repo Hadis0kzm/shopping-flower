@@ -1,18 +1,21 @@
 import React from 'react';
-/* import { Route , Routes } from 'react-router-dom'; */
+import { Route , Routes } from 'react-router-dom';
 
-import Slider from'./components/Banner';
-import Products from './components/cards.';
+import Header from './components/header';
+import Landing from './components/Landing';
+import Products from './components/cards';
+import Detailproduct from './components/Product';
 
 function App() {
   return (
     <div>
-      < Slider/>
-      < Products/>
-      {/* <Routes>
-        <Route path='/' element={< Slider/> } /> 
-        <Route path='/' element={< Products/>} />
-      </Routes> */}
+     <Header/> 
+      <Routes>
+        <Route path='/' element={< Landing/> } /> 
+        <Route path='/Products' element={< Products/>} />
+        <Route path='/Products/:id?' element={< Detailproduct/>} />
+
+      </Routes>
     </div>
   );
 }

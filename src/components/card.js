@@ -1,13 +1,16 @@
 import React from 'react';
+/* import {Navigate} from 'react-router-dom'; */
 
 import styles from './card.module.css';
-import Product from './Product'
+import Detailproduct from './Product'
+
+/* <Link to={`/Products/${id}`}></Link> */
 
 
 const card = (props) => {
-     const {image , name , price ,info}= props;
+     const {image , name , price ,info ,id}= props;
     return (
-        <div className={styles.container} onClick={<Product/>}>
+        <div className={styles.container} onClick={(event)=>{ <Detailproduct id={id}/>} } >
             <div className={styles.divimage}>
                 <img className={styles.image} src={image} alt='pic' loading='lazy' ></img>
                 <p className={styles.info}>{info}</p>

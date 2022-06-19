@@ -2,21 +2,24 @@ import React from 'react';
 
 import styles from './Product.module.css';
 
-const Product = () => {
+const Product = (props) => {
+    const {image , name , price ,info,id}= props;
     return (
         <div className={styles.container}>
             <div className={styles.right}>
-                <div className={rightup}>
-                    <h1></h1>
-                    <h5></h5>
-                    <button></button>
+                <div className={styles.rightup}>
+                    <h1>{name }{id} </h1>
+                    <h5>{price}</h5>
+                    <button>ADD TO CART</button>
                 </div>
-                <div className={rightbottom}>
-                    <ul></ul>
+                <div className={styles.rightbottom}>
+                    <ul>
+                        <li>{info}</li>
+                    </ul>
                 </div>
             </div>
             <div className={styles.left}>
-                <img></img>
+                <img alt={name} src={image}></img>
             </div>
         </div>
     );

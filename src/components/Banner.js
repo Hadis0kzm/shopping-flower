@@ -8,7 +8,6 @@ import imgflower from '../images/sliderImages/flower-slider.png';
 import imgpot from '../images/sliderImages/flowerPot-slider.jpg';
 import imgplant from '../images/sliderImages/plants-slider.jpg';
 
-import Header from'./header.js';
 
 const slideimg=[{ 
      key:1,
@@ -26,7 +25,7 @@ const slideimg=[{
 const Banner = () => {
 
     return (<>
-     <Header />
+    
      <div className={styles.sliderContainer}>
        <Slide easing="ease-in" className={styles.Slide} >
           <div className="each-slide">
