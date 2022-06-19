@@ -1,0 +1,15 @@
+.container{
+    width: 100%;
+    background-color: var(--keremKam);
+    padding: 0 20px;
+}
+
+.right{
+    width: 60%;
+    background-color: blueviolet;
+}
+
+.left{
+    width: 40%;
+    background-color: aqua;
+}
