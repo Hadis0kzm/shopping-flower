@@ -2,7 +2,7 @@ import React from 'react';
 /* import { Route , Routes } from 'react-router-dom'; */
 
 import Slider from'./components/Banner';
-import Products from './components/mainProduct';
+import Products from './components/cards.';
 
 function App() {
   return (
