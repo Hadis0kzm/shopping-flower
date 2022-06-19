@@ -3,7 +3,7 @@ import React from 'react';
 import  styles from './header.module.css'
 
 import carticon from '../images/cart.png'
-import logopic from '../images/belzoom-removebg.png'
+import logopic from '../images/bel_flower-blackzoom-removebg-.png'
 
 const header = () => {
     return (

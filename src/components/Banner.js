@@ -3,8 +3,8 @@ import {Slide} from 'react-slideshow-image';
 import styles from './Banner.module.css';
 import 'react-slideshow-image/dist/styles.css'
 
-import imgcactus from '../images/sliderImages/cactus-slider.jpg';
-import imgflower from '../images/sliderImages/flower-slider.jpg';
+import imgcactus from '../images/sliderImages/cactus-slider.png';
+import imgflower from '../images/sliderImages/flower-slider.png';
 import imgpot from '../images/sliderImages/flowerPot-slider.jpg';
 import imgplant from '../images/sliderImages/plants-slider.jpg';
 
