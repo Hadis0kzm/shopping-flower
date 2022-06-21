@@ -3,10 +3,13 @@
   padding: 0;
 }
 :root{
-  --keremPor:#FAF1E6;
-  --keramKam:#FDFAF6;
+  --KeremPor:#FAF1E6;
+  --KeramKam:#FDFAF6;
   --SabzKam:#E4EFE7;
-  --sabzPor:#064420;
+  --SabzPor:#064420;
 }
-
+@font-face {
+  font-family:"NotoSansRegular" ;
+  src: url('./fonts/NotoSans-Regular.ttf');
+}
 

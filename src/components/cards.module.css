@@ -1,15 +1,16 @@
 .MainContainer{
-    background-color:  var(--keremKam) ;
+    margin-top: 2px;
     width: 100%;
     height: fit-content;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap:2px;
-    /* padding-top: 0.5%; */
-}
-.MainContainer div{
-    background-color: yellowgreen;
 }
 
 
 
+
+@media(min-width:1200px){
+    .MainContainer{
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));}
+}
