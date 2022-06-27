@@ -2,15 +2,43 @@
     width: 100%;
     background-color: var(--KeremKam);
     display: flex;
+    
     height: fit-content;
 }
 
 .right{
-    width: 60%;
-    background-color: blueviolet;
-}
-
-.left{
     width: 40%;
-    background-color: aqua;
+    
+}
+.rightup{
+    background-color: red;
+    height: 20%;
+    line-height: 57px;
+    
+}
+.btn{
+    width: 40%;
+    height: 30%;
+    position: relative;
+    left: 55%;
+    bottom: 70%;
+    
+    background-color: var(--SabzPor);
+    color: var(--KeremPor);
+    opacity: 1;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.detail{
+    background-color: chartreuse;
+    height: fit-content;
+    position: relative;
+    bottom:  42.3%;
+}
+.left{
+    width: 60%;   
+}
+.imagee{
+    width:58.5vw ;    
 }

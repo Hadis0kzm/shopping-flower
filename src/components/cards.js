@@ -1,11 +1,9 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import styles from './cards.module.css'
 
 import Card from './card';
 
-/* import {useState} from 'react'; */
-
-import p1 from '../images/pot-cactus3.jpg';
+/* import p1 from '../images/pot-cactus3.jpg'; */
 import p2 from '../images/flower1.jpg';
 import p3 from '../images/plant2.jpg';
 import p4 from '../images/plant3.jpg';
@@ -17,11 +15,21 @@ import p9 from '../images/flower4.jpg';
 import p10 from '../images/cactus1.jpg';
 import p11 from '../images/flower3-rm.png';
 
-const cards = () => {
-   
+
+
+const Cards = () => {
+
+  const Card1 = useState({
+    id:"1",
+    image: ' ../images/pot-cactus3.jpg',
+    name:"red pot",
+    price:"2" ,
+    info:"jgnrg gneretptk erk tt ertggmfmgdgm mgr reterbbfb vgdfvfvbfg rterbf dgzhgngbzgbfg hf"
+  })
+
     return (
         <div className={styles.MainContainer}>
-          <Card id="1" image={p1} name="red pot" price="2" info="jgnrg gnergn grtnert optte ptetptk erk tt ertggmfmgdgm mgr reterbbfb vgdfvfvbfg rterbf dgzhgngbzgbfg hf"/> 
+          <Card id={Card1.id} image={Card1.image} price={Card1.price} name={Card1.name} info={Card1.info}/> 
           <Card id="2" image={p2} name=" pot" price="1" info="jgnrg gnergn grtnert JDFNDJKF DKJGJDFKNVD"/>
           <Card id="3" image={p3} name="gdfggf pot" price="2.3" info="jgnrg gnergn grtnert JDFNDJKF DKJGJDFKNVD"/>  
           <Card id="4" image={p4} name="avbiusdnfdfnvdfvndf plant" price="25" info="jgnrg gnergn grtnert JDFNDJKF DKJGJDFKNVD"/>
@@ -35,4 +43,4 @@ const cards = () => {
         </div>
     )
 };
-export default cards;
+export default Cards;
