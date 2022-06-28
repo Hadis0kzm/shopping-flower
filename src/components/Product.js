@@ -1,13 +1,13 @@
 import React from 'react';
 
 import styles from './Product.module.css';
-import imge from '../images/20.png'
+
 const Product = (props) => {
-    const { name , price ,id}= props;
+    const { name , price ,id ,image}= props;
     return (
         <div className={styles.container}>
             <div className={styles.left}>
-                <img alt='img' src={imge} className={styles.imagee}></img>
+                <img alt='img' src={image} className={styles.imagee}></img>
             </div>
             <div className={styles.right}>
                 <div className={styles.rightup}>

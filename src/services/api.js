@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const BASEurl ="https://fakestoreapi.com";
+const BASE_URL = "https://fakestoreapi.com";
 
-const GetProducts = async ()=>{
- const response = await axios.get(`${BASEurl}/products)`)
- return response.data;
+const getProducts = async () => {
+    const response = await axios.get(`${BASE_URL}/products`);
+    return response.data;
 }
 
-export {GetProducts};
+export {getProducts};

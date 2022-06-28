@@ -4,21 +4,19 @@ import {Link} from 'react-router-dom';
 import styles from './card.module.css';
 
 
-const Card = (props) => {
-     const {image , name , price ,info ,id}= props;
-     
-     console.log(props)
+const Card = ({data}) => {
+  
     return (
-        <a href={<Link to={`/products/${id}`}></Link>} className={styles.divlink} >
+        <a href={<Link to={`/products/${data.id}`}></Link>} className={styles.divlink} >
             <div className={styles.container}  >
                 <div className={styles.divimage}>
-                    <img className={styles.image} src={image} alt='pic' loading='lazy' ></img>
-                    <p className={styles.info}>{info}</p>
+                    <img className={styles.image} src={data.image} alt='pic' loading='lazy' ></img>
+                    <p className={styles.info}>{data.description}</p>
 
                 </div>
                 <div className={styles.specific}>
-                    <p className={styles.Name} >{name}</p>
-                    <p className={styles.price}>{price}$</p>
+                    <p className={styles.Name} >{data.title}</p>
+                    <p className={styles.price}>{data.price}$</p>
                 </div>            
             </div>
          </a>
