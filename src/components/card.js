@@ -1,13 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-
+import {Link} from 'react-router-dom'; 
 import styles from './card.module.css';
+//functions
+import {short} from '../helper/function';
 
 
 const Card = ({data}) => {
   
     return (
-        <a href={<Link to={`/products/${data.id}`}></Link>} className={styles.divlink} >
+         <Link to={`/Products/${data.id}`} className={styles.divlink} > 
             <div className={styles.container}  >
                 <div className={styles.divimage}>
                     <img className={styles.image} src={data.image} alt='pic' loading='lazy' ></img>
@@ -15,11 +16,11 @@ const Card = ({data}) => {
 
                 </div>
                 <div className={styles.specific}>
-                    <p className={styles.Name} >{data.title}</p>
+                    <p className={styles.Name} >{short(data.title)}</p>
                     <p className={styles.price}>{data.price}$</p>
                 </div>            
             </div>
-         </a>
+         </Link> 
     );
 };
  
