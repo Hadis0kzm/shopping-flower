@@ -18,11 +18,7 @@
 }
 .btn{
     width: 40%;
-    height: 30%;
-    position: relative;
-    left: 55%;
-    bottom: 70%;
-    
+    height: 30%; 
     background-color: var(--SabzPor);
     color: var(--KeremPor);
     opacity: 1;

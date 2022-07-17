@@ -12,7 +12,7 @@ const Card = ({data}) => {
             <div className={styles.container}  >
                 <div className={styles.divimage}>
                     <img className={styles.image} src={data.image} alt='pic' loading='lazy' ></img>
-                    <p className={styles.info}>{data.description}</p>
+                    <p className={styles.info}>{data.title}</p>
 
                 </div>
                 <div className={styles.specific}>

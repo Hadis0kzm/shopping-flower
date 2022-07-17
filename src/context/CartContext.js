@@ -10,6 +10,7 @@ const initialState ={
 }
 
 const reducer =(state , action)=>{
+    
     switch(action.type){
         case "INCREASE":
             const indexI= state.selectedItem.findIndex(item => (item.id ===action.payload.id))
@@ -63,10 +64,10 @@ export const CartContext =createContext();
 
 const CartContextfunc = ({children}) => {
 
-    const [state , action]= useReducer(reducer , initialState)
+    const [state , dispatch]= useReducer(reducer , initialState)
     
     return (
-        <CartContext.Provider value={{state:state , dispatch:action}}>
+        <CartContext.Provider value={{state , dispatch}}>
             {children}
         </CartContext.Provider>
     );
