@@ -22,7 +22,7 @@ const Header = () => {
             <div className={styles.center}>
                 <img src={logopic} className={styles.logo} alt="bel-logo"></img>
             </div>
-            <div className={styles.left} title={"Menu"}>
+            <div className={styles.left} title={"Menu"} >
                 <span className={styles.menu} ></span>
                 <span className={styles.menu}></span>
                 <span className={styles.menu}></span>        
