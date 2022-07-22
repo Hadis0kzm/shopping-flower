@@ -5,10 +5,12 @@ import Header from './components/header';
 import Landing from './components/Landing';
 import Products from './components/cards';
 import Detailproduct from './components/ProductDetail';
-/* import Footer from './components/Footer'; */
+ import Footer from './components/Footer'; 
 //context
 import ProductContextfunc from './context/ProductContext';
 import CartContextfunc  from './context/CartContext';
+
+
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
           </Switch>
         </CartContextfunc > 
       </ProductContextfunc>
-     {  /* <Footer/> */}
+       <Footer />  
     </>
   );
 }
