@@ -13,3 +13,7 @@
   src: url('./fonts/NotoSans-Regular.ttf');
 }
 
+footer{
+  position: relative;
+  bottom: 0;
+}

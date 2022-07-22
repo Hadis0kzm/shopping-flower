@@ -1,28 +1,36 @@
 import React,{ useReducer, createContext} from 'react';
 
-
-
 const initialState ={
      selectedItem : [],
-     number:0,
+     itmCounter:0,
      totalprice:0,
      checkout:false
 }
 
+const SumItem=items =>{
+    const itmCounter = items.reduce((total,product)=> total + product.quantity , 0);
+    const total=items.reduce((total,product) =>(total+ product.price * product.quantity , 0).toFixed(2))
+    return{ itmCounter,total};
+}
+
+
+
 const reducer =(state , action)=>{
-    
+    console.log(state)
     switch(action.type){
         case "INCREASE":
-            const indexI= state.selectedItem.findIndex(item => (item.id ===action.payload.id))
-            state.selectedItem[indexI].quantity++;
+            const indexI= state.selectedItem.findIndex(item => item.id ===action.payload.id);
+            state.selectedItem[indexI].quantity ++;
             return{
-                ...state
+                ...state,
+                ...SumItem(state.selectedItem)
             }
             case "DECREASE":
-                const indexD= state.selectedItem.findIndex(item => (item.id ===action.payload.id))
-                state.selectedItem[indexD].quantity--;
+                const indexD= state.selectedItem.findIndex(item => item.id ===action.payload.id);
+                state.selectedItem[indexD].quantity --;
                 return{
-                    ...state
+                    ...state,
+                    ...SumItem(state.selectedItem)
                 }    
             case "ADDITEM":
              if(!state.selectedItem.find(item => item.id === action.payload.id))
@@ -34,13 +42,15 @@ const reducer =(state , action)=>{
 
                 return{
                     ...state,
-                    selectedItem:[...state.selectedItem]
+                    selectedItem:[...state.selectedItem],
+                    ...SumItem(state.selectedItem)
                 }
         case "REMOVEITEM":
             const newSelectedItem= state.selectedItem.filter(item =>(item.id !== action.payload.id));
             return{
                 ...state,
-                selectedItem:[...newSelectedItem]
+                selectedItem:[...newSelectedItem],
+                ...SumItem(newSelectedItem)
             }
         case "CHECKOUT":
             return{

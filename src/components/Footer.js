@@ -10,11 +10,11 @@ const Footer = () => {
                 <div className={styles.toprightlogo}>
                     <img src={logo} alt='logo-belflower' className={styles.logo}></img>
                 </div>
-                <div className={styles.topcentersocialmedia}>
+                {/* <div className={styles.topcentersocialmedia}>
                     <a href='#'></a>
                     <a href='#'></a>
                     <a href='#'></a>
-                </div>
+                </div> */}
                 <div className={styles.topleft}></div>
             </div>
             <div className={styles.bottom}>

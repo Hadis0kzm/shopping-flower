@@ -8,14 +8,15 @@ import Detailproduct from './components/ProductDetail';
 /* import Footer from './components/Footer'; */
 //context
 import ProductContextfunc from './context/ProductContext';
-import CartContextfunc , {CartContext} from './context/CartContext';
+import CartContextfunc  from './context/CartContext';
 
 function App() {
   return (
     <>
-      <Header/> 
+      
       <ProductContextfunc> 
         <CartContextfunc> 
+        <Header/> 
           <Switch>
             <Route path='/Products/:id' component={Detailproduct} />
             <Route path='/Products' component={Products} />
