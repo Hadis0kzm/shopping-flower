@@ -34,6 +34,9 @@ const ProductDetail = (props) => {
                             quantityCount(state ,id)>1 && <button  onClick={()=>{dispatch({type:"DECREASE", payload: product})}}>-</button>
                         }
                         {
+                            quantityCount(state,id)>0 && <span>{quantityCount(state,id)}</span>
+                        }
+                        {
                             quantityCount(state ,id)===1 &&  <button onClick={()=>{dispatch({type:"REMOVEITEM", payload: product})}}>Remove</button>
                         }
                     </div>
