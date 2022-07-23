@@ -20,14 +20,14 @@ const reducer =(state , action)=>{
     switch(action.type){
         case "INCREASE":
             const indexI= state.selectedItem.findIndex(item => item.id ===action.payload.id);
-            state.selectedItem[indexI].quantity ++;
+            state.selectedItem[indexI].quantity=(state.selectedItem[indexI].quantity) +1/2;
             return{
                 ...state,
                 ...SumItem(state.selectedItem)
             }
             case "DECREASE":
                 const indexD= state.selectedItem.findIndex(item => item.id ===action.payload.id);
-                state.selectedItem[indexD].quantity --;
+                state.selectedItem[indexD].quantity=(state.selectedItem[indexD].quantity) -1/2;
                 return{
                     ...state,
                     ...SumItem(state.selectedItem)
