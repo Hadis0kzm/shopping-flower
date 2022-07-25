@@ -1,5 +1,5 @@
-import React from 'react';
-import { useContext } from 'react';
+import React,{ useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import styles from './Product.module.css';
 //context
 import { ProductsContext } from '../context/ProductContext';
@@ -9,8 +9,9 @@ import { IsInCart , quantityCount} from '../helper/function';
 
 
 
-const ProductDetail = (props) => {
-    const Id=props.match.params.id;
+const ProductDetail = () => {
+    const params=useParams()
+    const Id=params.id;
     const data= useContext(ProductsContext);
     const product = data[Id - 1];
     const{title , image ,description , price,id  }= product || {};

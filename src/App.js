@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route , Switch } from 'react-router-dom';
+import {  Route , Routes ,Navigate} from 'react-router-dom';
 //components
 import Header from './components/header';
 import Landing from './components/Landing';
@@ -20,13 +20,13 @@ function App() {
       <ProductContextfunc> 
         <CartContextfunc> 
         <Header/> 
-          <Switch>
-            <Route path='/Products/:id' component={Detailproduct} />
-            <Route path='/Products' component={Products} />
-            <Route path='/Shopcart' component={ShopCart}/>
-            <Route path='/' component={Landing} /> 
-            <Redirect to="/" />
-          </Switch>
+          <Routes>
+            <Route path='/Products/:id' element={<Detailproduct/>} />
+            <Route path='/Products' element={<Products/>} />
+            <Route path='/Shopcart' element={<ShopCart/>}/>
+            <Route path='/' element={<Landing/>} /> 
+            <Route path='/*' element={<Navigate to="/" />} />
+          </Routes>
         </CartContextfunc > 
       </ProductContextfunc>
        <Footer />  
