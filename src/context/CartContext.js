@@ -9,8 +9,9 @@ const initialState ={
 
 const SumItem=items =>{
     const itmCounter = items.reduce((total,product)=> total + product.quantity , 0);
-    const total=items.reduce((total,product) =>(total+ product.price * product.quantity , 0).toFixed(2))
-    return{ itmCounter,total};
+    
+    const total=items.reduce((total,product) => total+ product.price * (product.quantity) , 0).toFixed(2);
+    return{ itmCounter:itmCounter,totalprice:total};
 }
 
 
@@ -36,7 +37,8 @@ const reducer =(state , action)=>{
              if(!state.selectedItem.find(item => item.id === action.payload.id))
                 {state.selectedItem.push({
                     ...action.payload,
-                    quantity:1
+                    quantity:1,
+                    checkout:false
                      })
                     }
 
@@ -55,14 +57,14 @@ const reducer =(state , action)=>{
         case "CHECKOUT":
             return{
                 selectedItem : [],
-                 number:0,
+                 itmCounter:0,
                  totalprice:0,
                  checkout:true
             } 
         case "CLEAR":
             return{
                 selectedItem : [],
-                 number:0,
+                 itmCounter:0,
                  totalprice:0,
                  checkout:false
             } 

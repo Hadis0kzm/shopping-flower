@@ -5,7 +5,8 @@ import Header from './components/header';
 import Landing from './components/Landing';
 import Products from './components/cards';
 import Detailproduct from './components/ProductDetail';
- import Footer from './components/Footer'; 
+import Footer from './components/Footer'; 
+import ShopCart from './components/ShopCart';
 //context
 import ProductContextfunc from './context/ProductContext';
 import CartContextfunc  from './context/CartContext';
@@ -22,6 +23,7 @@ function App() {
           <Switch>
             <Route path='/Products/:id' component={Detailproduct} />
             <Route path='/Products' component={Products} />
+            <Route path='/Shopcart' component={ShopCart}/>
             <Route path='/' component={Landing} /> 
             <Redirect to="/" />
           </Switch>
