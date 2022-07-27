@@ -5,9 +5,7 @@ import 'react-slideshow-image/dist/styles.css'
 
 import imgcactus from '../images/sliderImages/cactus-slider.png';
 import imgflower from '../images/sliderImages/flower-slider.png';
-import imgpot from '../images/sliderImages/flowerPot-slider.jpg';
-import imgplant from '../images/sliderImages/plants-slider.jpg';
-
+import imgcloths from '../images/sliderImages/clothes.jpg'
 
 const slideimg=[{ 
      key:1,
@@ -15,12 +13,10 @@ const slideimg=[{
   {
     key:2,
     src:imgflower},
-  {
-    key:3,
-    src:imgpot},
-  { 
-    key:4,  
-    src:imgplant } ];
+    {
+      key:3,
+      src:imgcloths}
+   ];
 
 const Banner = () => {
 
@@ -43,11 +39,7 @@ const Banner = () => {
               
             </div>
           </div>
-          <div className="each-slide">
-            <div style={{'backgroundImage': `url(${ slideimg[3].src})`}}>
-              
-            </div>
-          </div>
+          
         </Slide>
       </div> 
       </>  
