@@ -9,7 +9,7 @@ const Landing = () => {
         <div>
             <Slider/>
             <Cards/>
-            
+             
         </div>
     );
 };

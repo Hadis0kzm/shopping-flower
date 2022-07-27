@@ -5,7 +5,7 @@ import Header from './components/header';
 import Landing from './components/Landing';
 import Products from './components/cards';
 import Detailproduct from './components/ProductDetail';
-import Footer from './components/Footer'; 
+ 
 import ShopCart from './components/ShopCart';
 //context
 import ProductContextfunc from './context/ProductContext';
@@ -29,7 +29,7 @@ function App() {
           </Routes>
         </CartContextfunc > 
       </ProductContextfunc>
-       <Footer />  
+      
     </>
   );
 }

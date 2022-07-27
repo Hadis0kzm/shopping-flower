@@ -20,8 +20,11 @@ const Header = () => {
                 </span> 
                 <Link to={`/Shopcart`}>
                 <img src={carticon} title={"Cart"} className={styles.cart} alt="cart" ></img > 
+                {
+                    state.itmCounter>0 &&  <p className={styles.itmCounter} >{ state.itmCounter }</p>
+                }
+                   
                 </Link>
-                <p >{ state.itmCounter }</p>   
             </div>
             <div className={styles.center}>
                 <img src={logopic} className={styles.logo} alt="bel-logo"></img>
