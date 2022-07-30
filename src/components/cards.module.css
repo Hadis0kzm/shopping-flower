@@ -13,5 +13,5 @@
 
 @media(min-width:1200px){
     .MainContainer{
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));}
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));}
 }

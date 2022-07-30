@@ -27,24 +27,25 @@ const ProductDetail = () => {
                     <h1> {title }  </h1>
                     <h5> {price}  $</h5>
                     <div>
-                       {  IsInCart(state,id )?
-                            <button  onClick={()=>{dispatch({type:"INCREASE", payload: product})}}>+</button>:
-                            <button onClick={()=>{dispatch({type:"ADDITEM", payload: product})}}>ADD TO CART</button>
-                        }
-                        {
-                            quantityCount(state ,id)>1 && <button  onClick={()=>{dispatch({type:"DECREASE", payload: product})}}>-</button>
-                        }
-                        {
+                    {
                             quantityCount(state,id)>0 && <span>{quantityCount(state,id)}</span>
                         }
+                       {  IsInCart(state,id )?
+                            <button className={styles.btn} onClick={()=>{dispatch({type:"INCREASE", payload: product})}}>+</button>:
+                            <button className={styles.btn}  onClick={()=>{dispatch({type:"ADDITEM", payload: product})}}>ADD TO CART</button>
+                        }
                         {
-                            quantityCount(state ,id)===1 &&  <button onClick={()=>{dispatch({type:"REMOVEITEM", payload: product})}}>Remove</button>
+                            quantityCount(state ,id)>1 && <button className={styles.btn}  onClick={()=>{dispatch({type:"DECREASE", payload: product})}}>-</button>
+                        }
+                        
+                        {
+                            quantityCount(state ,id)===1 &&  <button className={styles.btn}  onClick={()=>{dispatch({type:"REMOVEITEM", payload: product})}}>Remove</button>
                         }
                     </div>
-                    <div>
+                </div>
+                    <div className={styles.rightdown}>
                         <div className={styles.detail}>{description}</div>
                     </div>
-                </div>
                 
             </div>
             

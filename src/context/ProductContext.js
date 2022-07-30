@@ -8,7 +8,7 @@ export const ProductsContext = createContext();
 const ProductContextProvider = ({children}) => {
 
     const [products, setProducts] = useState([]);
-
+    
     useEffect(() => {
         const fetchAPI = async () => {
             setProducts(await getProducts());
@@ -16,7 +16,8 @@ const ProductContextProvider = ({children}) => {
 
         fetchAPI();
     }, []);
-
+    
+    
 
     return (
         <ProductsContext.Provider value={products}>

@@ -17,7 +17,7 @@ const SumItem=items =>{
 
 
 const reducer =(state , action)=>{
-    console.log(state)
+    
     switch(action.type){
         case "INCREASE":
             const indexI= state.selectedItem.findIndex(item => item.id ===action.payload.id);

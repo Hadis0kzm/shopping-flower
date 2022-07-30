@@ -1,20 +1,20 @@
 .container{
     width: 100%;
-    background-color: var(--KeremKam);
+    height: 100vh;
     display: flex;
     
-    height: fit-content;
 }
 
 .right{
     width: 40%;
-    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
 }
 .rightup{
-    background-color: red;
-    height: 20%;
-    line-height: 57px;
-    
+    background-color: var(--KeramKam);
+    height: 40%;   
 }
 .btn{
     width: 40%;
@@ -27,14 +27,18 @@
     cursor: pointer;
 }
 .detail{
-    background-color: chartreuse;
-    height: fit-content;
-    position: relative;
-    bottom:  42.3%;
+   font-family: "NotoSansRegular" ;   
+}
+.rightdown{
+    height: 20%;
+    border-radius: 25px;
+    background-color: var(--KeramKam);
 }
 .left{
-    width: 60%;   
+    width: 60%;  
+     
 }
 .imagee{
-    width:58.5vw ;    
+    max-width: 100%;
+      
 }
