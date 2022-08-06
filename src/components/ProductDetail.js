@@ -24,22 +24,22 @@ const ProductDetail = () => {
             </div>
             <div className={styles.right}>
                 <div className={styles.rightup}>
-                    <h1> {title }  </h1>
-                    <h5> {price}  $</h5>
-                    <div>
+                    <h2> {title }  </h2><br></br>
+                    <h3 style={{color:"var(--SabzPor)", textShadow:"0 0 white"}}>{price}  $</h3 ><br/>
+                    <div >
                     {
-                            quantityCount(state,id)>0 && <span>{quantityCount(state,id)}</span>
+                            quantityCount(state,id)>0 && <span className={styles.counter}>{quantityCount(state,id)}</span>
                         }
                        {  IsInCart(state,id )?
                             <button className={styles.btn} onClick={()=>{dispatch({type:"INCREASE", payload: product})}}>+</button>:
-                            <button className={styles.btn}  onClick={()=>{dispatch({type:"ADDITEM", payload: product})}}>ADD TO CART</button>
+                            <button className={styles.btnword}  onClick={()=>{dispatch({type:"ADDITEM", payload: product})}}>Buy</button>
                         }
                         {
                             quantityCount(state ,id)>1 && <button className={styles.btn}  onClick={()=>{dispatch({type:"DECREASE", payload: product})}}>-</button>
                         }
                         
                         {
-                            quantityCount(state ,id)===1 &&  <button className={styles.btn}  onClick={()=>{dispatch({type:"REMOVEITEM", payload: product})}}>Remove</button>
+                            quantityCount(state ,id)===1 &&  <button className={styles.btnword}  onClick={()=>{dispatch({type:"REMOVEITEM", payload: product})}}>Remove</button>
                         }
                     </div>
                 </div>
